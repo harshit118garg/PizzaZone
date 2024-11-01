@@ -1,0 +1,23 @@
+.header {
+  background-color: #303030 !important;
+
+  .header-toolbar {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: white !important;
+    }
+
+    .logo {
+      button {
+        margin: 0;
+      }
+
+      .logo-label {
+        line-height: 2.2;
+      }
+    }
+  }
+}
