@@ -24,6 +24,7 @@ export default function Navigation() {
                   edge="start"
                   color="inherit"
                   aria-label="menu"
+                  disabled
                   sx={{ mr: 2 }}
                 >
                   <LocalPizzaIcon />

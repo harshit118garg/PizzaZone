@@ -23,7 +23,7 @@ export default function ContentHeader() {
           </div>
           <div className="image-container">
             <Image
-              src="public/assets/contentHeaderImages/bannerImage.jpg"
+              src="./assets/contentHeaderImages/bannerImage.jpg"
               alt="Image 1"
             />
           </div>

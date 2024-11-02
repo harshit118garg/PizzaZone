@@ -2,10 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .lazy-image {
   height: 100% !important;
   width: 100% !important;
 }
-  
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  display: none;
+}

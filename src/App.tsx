@@ -4,8 +4,23 @@ import { theme } from "./theme/theme";
 import Navigation from "./widgets/Header";
 import ContentHeader from "./widgets/ContentHeader";
 import Container from "./widgets/Container";
+import { useQuery } from "@tanstack/react-query";
+import { fetchPizzaData } from "./api/query";
+import { PizzaResponseType } from "./definations/types";
 
 function App() {
+  const { isPending, error, data } = useQuery<PizzaResponseType[]>({
+    queryKey: ["pizzas"],
+    queryFn: fetchPizzaData,
+    refetchOnMount: "always",
+  });
+
+  if (isPending) return "Loading...";
+
+  if (error) return "An error has occurred: " + error.message;
+
+    console.log({ data });
+
   return (
     <>
       <ThemeProvider theme={theme}>

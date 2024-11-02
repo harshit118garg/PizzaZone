@@ -13,6 +13,10 @@
     .logo {
       button {
         margin: 0;
+
+        &:disabled {
+          color: white !important;
+        }
       }
 
       .logo-label {
