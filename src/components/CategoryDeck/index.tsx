@@ -1,5 +1,4 @@
 import { Stack } from "@mui/material";
-import "./style.css";
 import { PIZZA_CATEGORIES } from "../../definations/constants";
 import { Fragment } from "react/jsx-runtime";
 import PizzaCategoryChip from "../../widgets/Chip";
@@ -10,6 +9,7 @@ export default function CategoryDeck() {
       <Stack
         direction={{ xs: "column", sm: "row" }}
         spacing={{ xs: 1, sm: 2, md: 4 }}
+        marginBottom={'2rem'}
       >
         {PIZZA_CATEGORIES.map((c, i) => {
           return (
