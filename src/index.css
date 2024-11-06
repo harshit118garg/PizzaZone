@@ -1,8 +1,13 @@
+:root {
+  background-color: #e1e1e1;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: none;
+  font-family: "Roboto", sans-serif;
 }
 
 html {

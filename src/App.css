@@ -1,0 +1,15 @@
+#app {
+  position: relative;
+
+  #pizzaZone {
+    margin: 2rem 0;
+  }
+
+  .scroll-down {
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}

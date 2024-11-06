@@ -15,7 +15,7 @@ export default function ContentHeader() {
               <Typography
                 className="sub-content"
                 variant="subtitle1"
-                component="div"
+                component="p"
               >
                 Your One stop destination for all your pizza cravings
               </Typography>
