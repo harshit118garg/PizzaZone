@@ -1,4 +1,4 @@
-import { Chip } from "@mui/material";
+import { Button } from "@mui/material";
 import { PIZZACATEGORY } from "../../definations/types";
 
 export default function PizzaCategoryChip({
@@ -6,9 +6,17 @@ export default function PizzaCategoryChip({
   categoryHighlight,
 }: PIZZACATEGORY) {
   return (
-    <Chip
-      label={category}
-      sx={{ bgcolor: categoryHighlight, color: "white" }}
-    />
+    <Button
+      type="button"
+      size="small"
+      sx={{
+        bgcolor: categoryHighlight,
+        color: "white",
+        borderRadius: "25px",
+        padding: "0.25rem",
+      }}
+    >
+      {category}
+    </Button>
   );
 }
