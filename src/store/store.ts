@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
-import { fetchPizzaData } from "../api/query";
+import { fetchPizzaDataQuery } from "../api/query";
 import { PizzaResponseType } from "../definations/types";
 
 export interface PizzaStoreState {
@@ -18,7 +18,7 @@ export const usePizzaStore = create<PizzaStoreState>()(
     fetchPizzaData: async () => {
       set({ loading: true, error: null });
       try {
-        const data = await fetchPizzaData();
+        const data = await fetchPizzaDataQuery();
         if (data) {
           set({ pizzaData: data, loading: false, error: null });
         } else {

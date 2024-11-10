@@ -14,7 +14,7 @@ export default function CategoryDeck() {
         {PIZZA_CATEGORIES.map((c, i) => {
           return (
             <Fragment key={i}>
-              <PizzaCategoryChip category={c} />
+              <PizzaCategoryChip {...c} />
             </Fragment>
           );
         })}

@@ -19,6 +19,11 @@ export enum Category {
   Vegetarian = "Vegetarian",
 }
 
+export interface PIZZACATEGORY {
+  category: Category;
+  categoryHighlight: string;
+}
+
 export interface Image {
   id: string;
   width: number;

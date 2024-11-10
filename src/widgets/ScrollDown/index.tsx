@@ -4,7 +4,7 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 export default function ScrollerDown() {
   return (
     <div className="scroll-down">
-      <IconButton>
+      <IconButton className="scrollDownButton">
         <ArrowDownwardIcon />
       </IconButton>
     </div>

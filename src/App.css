@@ -11,5 +11,32 @@
     bottom: 2rem;
     transform: translateX(-50%);
     z-index: 1;
+
+    .scrollDownButton {
+      background-color: darkgray;
+      animation: bounce 0.85s infinite ease-in-out;
+
+      &:hover {
+        background-color: #212221;
+
+        svg {
+          fill: whitesmoke;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: -4px;
+  }
+
+  50% {
+    top: 0;
+  }
+
+  100% {
+    top: 2px;
   }
 }
