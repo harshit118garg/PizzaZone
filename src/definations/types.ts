@@ -11,6 +11,7 @@ export interface PizzaResponseType {
 }
 
 export enum Category {
+  ALL = "All",
   Gourmet = "Gourmet",
   Meat = "Meat",
   Seafood = "Seafood",
@@ -30,4 +31,9 @@ export interface Image {
   height: number;
   title: string;
   url: string;
+}
+
+export interface FilterTypes {
+  category?: string;
+  rating?: number;
 }

@@ -1,3 +1,4 @@
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import CancelIcon from "@mui/icons-material/Cancel";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import {
@@ -14,6 +15,7 @@ import {
 } from "@mui/material";
 import { PIZZA_CATEGORIES } from "../../definations/constants";
 import { PIZZACATEGORY, PizzaResponseType } from "../../definations/types";
+import { formatPrice } from "../../utils/helper";
 import PizzaCategoryChip from "../Chip";
 import "./index.css";
 
@@ -34,7 +36,7 @@ export default function PizzaCard(pizza: PizzaResponseType) {
   ) as PIZZACATEGORY;
 
   return (
-    <Card className="pizzaCard">
+    <Card className={`pizzaCard ${!availability ? "NotAvailable" : ""}`}>
       <CardMedia
         component="img"
         height="300"
@@ -44,7 +46,7 @@ export default function PizzaCard(pizza: PizzaResponseType) {
       {/* Price overlay */}
       <Box className="moveTop">
         <Typography variant="body1" sx={{ fontWeight: "bold" }}>
-          ${price.toFixed(2)}
+          {formatPrice(price)}
         </Typography>
         <Rating
           name="read-only"
@@ -100,8 +102,16 @@ export default function PizzaCard(pizza: PizzaResponseType) {
             </Box>
           )}
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary">
+        <CardActions sx={{ marginBottom: 2, width: "100%" }}>
+          <Button
+            variant="contained"
+            size="small"
+            color="secondary"
+            disabled={!availability}
+            endIcon={<AddShoppingCartIcon />}
+            sx={{ width: "100%" }}
+            aria-label="add to shopping cart"
+          >
             Add to Cart
           </Button>
         </CardActions>

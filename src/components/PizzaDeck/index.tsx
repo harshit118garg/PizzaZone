@@ -18,8 +18,8 @@ export default function PizzaDeck({ pizzaData }: PizzaDeckProps) {
       >
         {pizzaData.map((pizza) => {
           return (
-            <Grid size={{ lg: 4, md: 4, sm: 3, xs: 1 }}>
-              <PizzaCard key={pizza.id} {...pizza} />
+            <Grid key={pizza.id} size={{ lg: 4, md: 4, sm: 3, xs: 1 }}>
+              <PizzaCard {...pizza} />
             </Grid>
           );
         })}
